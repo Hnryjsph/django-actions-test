@@ -24,17 +24,9 @@ jobs:
       run:
         python3 -m pip install --upgrade
         pip install -r requirements.txt
-    - name: Run migrations
-      run:
-        python manage.py makemigrations
-        python manage.py migrate
     - name: Lint with flake8
       run:
         flake8
-    - name: Coverage report
-      run:
-        coverage run manage.py test
-        coverage report
     - name: Django testing
       run:
         python3 manage.py test
