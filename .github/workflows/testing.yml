@@ -11,11 +11,11 @@ on:
       -main
       -master
 
-job:
+jobs:
   build:
     runs-on: ubuntu-latest
 
-    step:
+    steps:
     - uses: actions/checkout@v2
     - name: Set up python 3.11
       uses: action/setup-python@v2
