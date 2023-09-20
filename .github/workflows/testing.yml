@@ -19,18 +19,16 @@ jobs:
     - name: Set up python 3.11
       uses: actions/setup-python@v2
       with:
-        python-version: 3.7
+        python-version: 3.11
     - name: Install all the dependencies
       run:
         python3 -m pip install --upgrade
         pip install -r requirements.txt
     - name: Lint with flake8
       run:
-        pip install flake8
         flake8
     - name: Coverage report
       run:
-        pip install coverage
         coverage run manage.py test
         coverage report
     - name: Django testing
